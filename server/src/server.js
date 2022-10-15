@@ -19,7 +19,7 @@ io.on("connection", (socket) => {
   console.log("a user connected");
   socket.on("getId", (data) => {
     socket.emit(socket.id);
-  });
+  });  
 
   socket.on("sendDataClient", (data) => {
     socket.emit("sendDataServer", { data });
